@@ -8,9 +8,9 @@ namespace AssignmentOne
     {
         public string In()
         {
-            string UserIn = Console.ReadLine().ToLower();
+            string UserIn = Console.ReadLine().ToLower(); //Make sure all input is the same capitalisation
 
-            if (UserIn == "a")
+            if (UserIn == "a") //Check using a, b, c for the user's choice
             {
                 return "NetOne";
             }
@@ -22,10 +22,10 @@ namespace AssignmentOne
             {
                 return "NetThree";
             }
-            else
+            else //If it isn't any of the valid inputs
             {
                 Console.WriteLine("You didn't enter a valid input. Please enter either A, B or C.");
-                return In();
+                return In(); //Show an error message and restart until correct input provided
             }
         }
     }
