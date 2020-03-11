@@ -36,7 +36,7 @@ namespace AssignmentOne
             }
             else //If it isn't any of the valid inputs
             {
-                Console.WriteLine("You didn't enter a valid input. Please enter either A, B or C.");
+                Console.WriteLine("You didn't enter a valid input. Please enter either A, B, C, D, E or F.");
                 return In(); //Show an error message and restart until correct input provided
             }
         }
