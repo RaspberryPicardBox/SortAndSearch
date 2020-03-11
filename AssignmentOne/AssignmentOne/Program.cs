@@ -11,15 +11,21 @@ namespace AssignmentOne
         static void Main(string[] args)
         {
             //Read in the files to arrays
-            List<string> NetOne = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_1_256.txt")); //Read all three files into new lists
+            List<string> NetOne = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_1_256.txt")); //Read all files into new lists
             List<string> NetTwo = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_2_256.txt"));
             List<string> NetThree = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_3_256.txt"));
+            List<string> NetOne2048 = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_1_2048.txt"));
+            List<string> NetTwo2048 = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_2_2048.txt"));
+            List<string> NetThree2048 = new List<string>(System.IO.File.ReadAllLines(@"..\..\..\..\..\Net_3_2048.txt"));
 
             List<int> NetOneInt = new List<int>(); //And create three empty lists
             List<int> NetTwoInt = new List<int>(); //These will be filled with the integer type content of the text files
             List<int> NetThreeInt = new List<int>();
+            List<int> NetOne2048Int = new List<int>(); 
+            List<int> NetTwo2048Int = new List<int>(); 
+            List<int> NetThree2048Int = new List<int>();
 
-            List<int> UseArray; //And create a final list for the final array to be used at any time
+            List<int> UseArray = new List<int>(); //And create a final list for the final array to be used at any time
 
             foreach (string value in NetOne) //For every line "value" in the file,
             {
@@ -33,11 +39,23 @@ namespace AssignmentOne
             {
                 NetThreeInt.Add(int.Parse(value));
             }
+            foreach (string value in NetOne2048)
+            {
+                NetOne2048Int.Add(int.Parse(value));
+            }
+            foreach (string value in NetTwo2048)
+            {
+                NetTwo2048Int.Add(int.Parse(value));
+            }
+            foreach (string value in NetThree2048)
+            {
+                NetThree2048Int.Add(int.Parse(value));
+            }
 
             //Ask the user which array to analyse
             UserInput userInput = new UserInput();
             Console.WriteLine("Which array would you like to analyse?");
-            Console.WriteLine("A for Net_1_256, B for Net_2_256 and C for Net_3_256. Input is not case sensitive.");
+            Console.WriteLine("A for Net_1_256, B for Net_2_256 and C for Net_3_256. D for net_1_2048, E for net_2_2048, F for net_3_2048. Input is not case sensitive.");
             string answer = userInput.In(); //Using the UserInput class to provide error detection for input
             if (answer == "NetOne")
             {
@@ -47,9 +65,21 @@ namespace AssignmentOne
             {
                 UseArray = NetTwoInt;
             }
-            else
+            else if (answer == "NetThree")
             {
                 UseArray = NetThreeInt;
+            }
+            else if (answer == "NetOne2048")
+            {
+                UseArray = NetOne2048Int;
+            }
+            else if (answer == "NetTwo2048")
+            {
+                UseArray = NetTwo2048Int;
+            }
+            else if (answer == "NetThree2048")
+            {
+                UseArray = NetThree2048Int;
             }
 
             //Sort in ascending order

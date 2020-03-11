@@ -22,6 +22,18 @@ namespace AssignmentOne
             {
                 return "NetThree";
             }
+            else if (UserIn == "d")
+            {
+                return "NetOne2048";
+            }
+            else if (UserIn == "e")
+            {
+                return "NetTwo2048";
+            }
+            else if (UserIn == "f")
+            {
+                return "NetThree2048";
+            }
             else //If it isn't any of the valid inputs
             {
                 Console.WriteLine("You didn't enter a valid input. Please enter either A, B or C.");
