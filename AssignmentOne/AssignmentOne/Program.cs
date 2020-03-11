@@ -21,8 +21,8 @@ namespace AssignmentOne
             List<int> NetOneInt = new List<int>(); //And create three empty lists
             List<int> NetTwoInt = new List<int>(); //These will be filled with the integer type content of the text files
             List<int> NetThreeInt = new List<int>();
-            List<int> NetOne2048Int = new List<int>(); 
-            List<int> NetTwo2048Int = new List<int>(); 
+            List<int> NetOne2048Int = new List<int>();
+            List<int> NetTwo2048Int = new List<int>();
             List<int> NetThree2048Int = new List<int>();
 
             List<int> UseArray = new List<int>(); //And create a final list for the final array to be used at any time
@@ -92,6 +92,9 @@ namespace AssignmentOne
                 Console.WriteLine(number);
             }
 
+            Console.WriteLine("\nTo continue, press any key.");
+            Console.ReadLine();
+
             //Sort in descending order
             Console.WriteLine("\n");
             Console.WriteLine("Descending Order:");
@@ -100,6 +103,9 @@ namespace AssignmentOne
             {
                 Console.WriteLine(number); //And write to console each value
             }
+
+            Console.WriteLine("\nTo continue, press any key.");
+            Console.ReadLine();
 
             //Display tength values
             Console.WriteLine("\n");
@@ -114,6 +120,9 @@ namespace AssignmentOne
                     Console.WriteLine(value);
                 }
             }
+
+            Console.WriteLine("\nTo continue, press any key.");
+            Console.ReadLine();
 
             //Search for a given value
             binarySearch binary = new binarySearch(); //Create a new instance of the binary search method
